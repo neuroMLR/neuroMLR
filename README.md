@@ -3,7 +3,7 @@
 
 Download the [preprocessed data](https://drive.google.com/file/d/1bICE26ndR2C29jkfG2qQqVkmpirK25Eu/view?usp=sharing) and unzip the downloaded .zip file.  
 
-Set the PREFIX_PATH variable in constants.py as the path to this extracted folder.
+Set the PREFIX_PATH variable in my_constants.py as the path to this extracted folder.
 
 For each city (Chengdu, Harbin etc), there are two types of data:
 
@@ -45,15 +45,14 @@ pip install torch-geometric
 
 # Usage
 
-After setting PREFIX_PATH in the constants.py file, the script can be run directly with default arguments as follows- 
+After setting PREFIX_PATH in the my_constants.py file, the script can be run directly as follows- 
 ```bash
-python -i main.py 
+python -i main.py -dataset harbin_data -gnn GCN -lipschitz 
 ```
 Other functionality can be toggled by adding them as arguments, for example,
 
 ```bash
-python -i main.py -dataset DATASET -gpu_index GPU_ID -eval_frequency EVALUATION_PERIOD_IN_EPOCHS -epochs NUM_EPOCHS
-python -i main.py -traffic
+python -i main.py -dataset DATASET -gpu_index GPU_ID -eval_frequency EVALUATION_PERIOD_IN_EPOCHS -epochs NUM_EPOCHS 
 python -i main.py -traffic -attention
 python -i main.py -check_script
 python -i main.py -cpu
@@ -89,6 +88,6 @@ Brief description of other arguments/functionality -
 | _-traffic_ | to toggle the attention module |
 | _-attention_ | to toggle the attention module |
 
-For exact details about the expected format and possible inputs please refer to the args.py file. 
+For exact details about the expected format and possible inputs please refer to the args.py and my_constants.py files. 
 
 

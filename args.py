@@ -12,7 +12,7 @@ def make_args():
 
 	parser.add_argument("-fixed_embeddings", action="store_false", dest="trainable_embeddings")
 	parser.add_argument("-memory_method", default = None, type = str, dest = "memory_method")
-	parser.add_argument("-dataset", default = "harbin_new", type = str, dest = "dataset")
+	parser.add_argument("-dataset", default = "harbin_data", type = str, dest = "dataset")
 	parser.add_argument("-gnn", default = None, type = str, dest = "gnn")
 
 	parser.add_argument("-with_correction", action="store_true", dest = "with_correction")

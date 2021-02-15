@@ -4,7 +4,7 @@ from termcolor import colored, cprint
 #########################################################################
 # please set this path according to the extracted folder
 PREFIX_PATH = None
-# PREFIX_PATH = "/home/qpp/data/"
+# PREFIX_PATH = "/home/qpp/data/preprocessed_data/"
 #########################################################################
 
 if PREFIX_PATH is None:
@@ -19,7 +19,8 @@ def get_fname(percent_data, s):
 	fname = s[:-4] + '_partial_{}.pkl'.format(percent_data)
 	return fname
 
-OUTDATED_DATASETS = ["harbin", "porto", "chengdu"]
+# OUTDATED_DATASETS = ["harbin", "porto", "chengdu"]
+OUTDATED_DATASETS = []
 PERCENTAGES = [1, 5, 10, 20, 50, 100]
 
 EDGE_DATA = PREFIX_PATH + "map/edges.shp"
